@@ -1,10 +1,4 @@
-from django.http.response import JsonResponse, HttpResponseRedirect, HttpResponse
-from datetime import datetime, timedelta
-import json, httplib
-
-
-
-
+from django.http.response import JsonResponse
 
 def init_response(res_str=None, data=None):
     """

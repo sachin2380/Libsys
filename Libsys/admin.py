@@ -2,14 +2,11 @@ from django.contrib import admin
 from sre_parse import CATEGORIES
 from unicodedata import category
 from django.contrib.admin.sites import site
-from .models import Book
-
-# Register your models here. 
 from Libsys.models import Language, Author, Book, Ebook, User, Publisher, BookInfo
 class languageAdmin(admin.ModelAdmin):
       list_per_page = 20
-      list_display=('lang_id', 'name', 'script', 'about')
-      list_display_links=['lang_id']
+      list_display=('language_id', 'name', 'script', 'about')
+      list_display_links=['language_id']
 
 class BookAdmin(admin.ModelAdmin):
       list_per_page = 20
@@ -34,14 +31,14 @@ class ebookAdmin(admin.ModelAdmin):
 class userAdmin(admin.ModelAdmin):
       list_per_page = 20
       list_display=('user_id', 'first_name', 'email_id', 'mobile_no', 'subscription', 'created_on', 'updated_on',\
-            'favorite', 'role')
-      raw_id_fields=['favorite']
-      def favorite(self, obj):
-        return "\n".join([fav.favorite for fav in obj.favorite.all()])
+            'favourite', 'role')
+      raw_id_fields=['favourite']
+      def favourite(self, obj):
+        return "\n".join([fav.favourite for fav in obj.favourite.all()])
 
 class publisherAdmin(admin.ModelAdmin):
       list_per_page = 20
-      list_display=('pub_id', 'name', 'contact_details')               
+      list_display=('publisher_id', 'name', 'contact_details')               
 
 
 class BookInfoAdmin(admin.ModelAdmin):
@@ -66,5 +63,4 @@ admin.site.register(Ebook, ebookAdmin)
 admin.site.register(User ,userAdmin)
 admin.site.register(Publisher ,publisherAdmin)
 admin.site.register(BookInfo ,BookInfoAdmin)
-# admin.site.register(UserRoles ,UserRoleAdmin)
 

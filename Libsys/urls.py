@@ -1,4 +1,3 @@
-import site
 from django.contrib import admin
 from django.conf.urls import url, include
 from .views import AuthorView, LanguageView, UserView, BookView, PublisherView, EbookView,\

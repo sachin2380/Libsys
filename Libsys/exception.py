@@ -22,7 +22,7 @@ class EbookException(Exception):
 class BookInfoException(Exception):
     pass
 
-class Subscriptionexception(Exception):
+class SubscriptionException(Exception):
     pass
 
 class ApprovalException(Exception):
