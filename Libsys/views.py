@@ -161,29 +161,6 @@ class BookView(View):
         if not book_objs:
             raise BookException("Invalid Book id")
 
-    # def post(self, request, *args, **kwargs):
-    #     params = request.POST.dict()
-    #     try:
-    #         # name = params.get('name')
-    #         # category = params.get('category')
-    #         # book_type = params.get('book_type')
-    #         # extra = params.get('extra')
-    #         # language_id = params.get('language_id')
-    #         # lang_obj = Language.objects.get(lang_id = language_id)
-    #         # publisher_id = params.get('pub_id')
-    #         # publisher_obj = Publisher.objects.get(pub_id = publisher_id)
-    #         # author_id =params.get('author_id')
-    #         # author_obj = Author.objects.get(author_id=author_id)
-    #         # file_url = request.FILES['e_book']
-    #         # Book.objects.add_book(name, lang_obj, publisher_obj, author_obj, category, book_type, extra, file_url)
-    #         Book.objects.add_book(params)
-    #         self.response['res_str'] = BOOK_SUCCESSFULLY_ADDED
-    #         return send_200(self.response)
-    #     except Exception as ex:
-    #         str(traceback.format_exc())
-    #         self.response['res_str'] = str(ex)
-    #         return send_400(self.response)
-
     def post(self,request,*args, **kwargs):
 
         def __init__(self):
